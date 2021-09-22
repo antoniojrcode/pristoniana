@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Player Pristoniana</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="logo">
+            <a href="https://pristoniana.com.br" target="_blank"><img src="img/logoPristo.png"
+                    title="Clique para ir ao nosso site"></a>
+        </header>
+        <section class="box-player">
+            <div class="boxInfo">
+                <div class="capaMusic">
+                    <img class="cc_streaminfo" data-type="trackimageurl" data-username="matosjun" />
+                </div>
+                <div class="infoRadio">
+                    <p>locutor: </p>
+                    <p>auto dj</p>
+                </div>
+                <div class="infoRadio">
+                    <p>programa: </p>
+                    <p>24 horas</p>
+                </div>
+                <div class="infoRadio">
+                    <p>música: </p>
+                    <p>
+                        <marquee><span class="cc_streaminfo" data-type="song" data-username="matosjun">Carregando
+                                ...</span></marquee>
+                    </p>
+                </div>
+
+            </div>
+            <!-- boxInfo -->
+
+            <div class="controles">
+                <div class="botoes">
+                    <div class="play">
+                        <img onclick="play()" src="img/play.png">
+                    </div>
+
+                    <div class="pause">
+                        <img onclick="stop()" src="img/pause.png" alt="">
+                    </div>
+
+                    <div class="volumeMais">
+                        <img onclick="aumentar_volume()" src="img/volMais.png" alt="">
+                    </div>
+
+                    <div class="volumeMenos">
+                        <img onclick="diminuir_volume()" src="img/volMenos.png" alt="">
+                    </div>
+                </div> <!-- fim botoes -->
+
+                <div class="ouvintes">
+                    <img src="img/ouvinte.png" alt="" title="Ouvintes Conectados">
+                    <p><span class="cc_streaminfo" data-type="listeners" data-username="matosjun"></span></p>
+                </div>
+            </div> <!-- controles -->
+        </section>
+        <section>
+            <audio id="player" autoplay="autoplay" controls="controls">
+                <source src="https://cast4.hoost.com.br:20290/stream" type="audio/mp3" />
+                seu navegador não suporta HTML5
+            </audio>
+        </section>
+    </main>
+    <script src="js/scriptradio.js"></script>
+    <script language="javascript" type="text/javascript"
+        src="https://cast4.hoost.com.br:2199/system/streaminfo.js"></script>
+</body>
+
+</html>
