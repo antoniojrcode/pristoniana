@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#player {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 10px;
+    background-image: url(../img/bgPlayer.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    /* background-image: linear-gradient(to bottom, #210c17 30%, #000); */
+}
+
+p {
+    color: #e8bc95;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+img {
+    display: block;
+}
+
+.logo {
+    margin: 40px 0;
+}
+
+.logo img{
+    margin: 0 auto;
+}
+
+.box-player {
+    width: 100%;
+    max-width: 345px;
+    /* background-color: #021b12; */
+    background-image: linear-gradient(to bottom, #021b12 50%, #020c08);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.boxInfo {
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 200px;
+}
+
+.capaMusic {
+    width: 113px;
+    height: 113px;
+    background-color: #18120C;
+}
+
+.capaMusic > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.box-player, .capaMusic {
+    border-radius: 10px;
+}
+
+.infoRadio {
+    border-radius: 5px;
+}
+
+.box-player, .capaMusic, .infoRadio {
+    border: 1px solid #e8bc95;
+    box-shadow: 0px 0px 3px #e8bc95;
+}
+
+.boxInfo > div.capaMusic:nth-child(1) {
+    grid-row: 1/4;
+}
+
+.infoRadio {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    max-width: 200px;
+    padding: 5px;
+    background-color: #18120C;
+}
+
+.infoRadio p {
+    padding-right: 5px;
+}
+
+.infoRadio p marquee > span, .infoRadio p:nth-child(2) {
+    color: #fff;
+}
+
+.controles{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.botoes {
+    display: flex;
+    
+}
+
+.botoes > div {
+    margin-right: 5px;
+}
+
+.botoes > div:hover{
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #e8bc95;
+}
+
+.ouvintes {
+    display: flex;
+}
+
+.ouvintes > img, p {
+    align-self: center;
+}
+
+.ouvintes > img {
+    margin-right: 5px;
+}
+
+.ouvintes > p {
+    font-size: 14px;
+}
+
+@media (max-width: 414px) {
+    .container {
+        max-width: none;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .logo img{
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .boxInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .capaMusic {
+        width: 150px;
+        height: 150px;
+        background-color: #000;
+        border-radius: 50%;
+    }
+
+    .capaMusic > img {
+        border-radius: 50%;
+    }
+
+    .infoRadio {
+        max-width: none;
+    }
+
+    .infoRadio p marquee > span, .infoRadio p:nth-child(2) {
+        width: 100%;
+    }
+}
